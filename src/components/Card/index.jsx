@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import './style.css'
 import moment from "moment";
@@ -28,8 +29,8 @@ export default function Card({
         <div>
           <p>
             <span>{moment(launchDateUtc).fromNow()} </span>
-            {videoLink && <span>| Video </span>}
-            {articleLink && <span>| Article </span>}
+            {videoLink && <span>| <Link to={videoLink} target="_blank">Video</Link> </span>}
+            {articleLink && <span>| <Link to={articleLink} target="_blank">Article</Link> </span>}
           </p>
           {image ? (
             <img src={image} alt="Mission Badge" />
