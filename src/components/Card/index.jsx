@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import './style.css'
+import moment from "moment";
 
 export default function Card({
   missionName,
@@ -26,7 +27,7 @@ export default function Card({
       {isExpanded && (
         <div>
           <p>
-            <span>{launchDateUtc} </span>
+            <span>{moment(launchDateUtc).fromNow()} </span>
             {videoLink && <span>| Video </span>}
             {articleLink && <span>| Article </span>}
           </p>
