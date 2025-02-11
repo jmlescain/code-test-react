@@ -1,0 +1,12 @@
+.status {
+  display: inline-block;
+  font-size: 0.5em;
+  line-height: 1;
+  padding: 0.25rem;
+  vertical-align: top;
+}
+
+.missionName {
+  font-size: 1em;
+  font-weight: bold;
+}

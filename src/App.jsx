@@ -41,9 +41,9 @@ function App() {
             isUpcoming={item.upcoming}
             isSuccess={item.launch_success}
             launchDateUtc={item.launch_date_utc}
-            articleLink={item.article_link}
-            videoLink={item.video_link}
-            image={item.mission_patch_small}
+            articleLink={item.links.article_link}
+            videoLink={item.links.video_link}
+            image={item.links.mission_patch_small}
             description={item.details}
           />
         ))

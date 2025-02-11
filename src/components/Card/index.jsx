@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
+import './style.css'
 
 export default function Card({
   missionName,
@@ -16,30 +17,18 @@ export default function Card({
   return (
     <div>
       <p>
-        <span>{missionName}</span>
-        {isUpcoming ? (
-          <span>upcoming</span>
-        ) : isSuccess ? (
-          <span>success</span>
-        ) : (
-          <span>failed</span>
-        )}
+        <span className="missionName">{missionName}</span>
+        <span className="status">
+          {isUpcoming ? "upcoming" : isSuccess ? "success" : "failed"}
+        </span>
       </p>
 
       {isExpanded && (
         <div>
           <p>
-            <span>{launchDateUtc}</span>
-            {videoLink && (
-              <span>
-                | <Link to={videoLink}>Video</Link>{" "}
-              </span>
-            )}
-            {articleLink && (
-              <span>
-                | <Link to={articleLink}>Article</Link>{" "}
-              </span>
-            )}
+            <span>{launchDateUtc} </span>
+            {videoLink && <span>| Video </span>}
+            {articleLink && <span>| Article </span>}
           </p>
           {image ? (
             <img src={image} alt="Mission Badge" />
